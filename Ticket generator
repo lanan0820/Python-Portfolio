@@ -1,0 +1,70 @@
+#Initialize
+import turtle
+t = turtle.Turtle()
+
+#Functions
+
+#Draws an admission ticket with a label and customer information inside. This function uses a turtle to draw a ticket with the name of the customer and the price paid for the ticket.
+#(string: name) represents the customers name that appears inside the ticket
+#(integer: price) represents the price the customer paid that appears inside the ticket
+#(string: dayofweek) represents the day of the week that the ticket was purchased
+#(integer: y_location) y_location represents the vertical loction of the ticket
+def draw_ticket(name, price, dayofweek, y_location):
+    t.goto(-50, y_location)
+    t.write("Ticket", font=("Arial", 15), align="right")
+    t.pendown()
+    for i in range(2):
+        t.forward(500)
+        t.left(90)
+        t.forward(250)
+        t.left(90)
+    t.penup()
+    t.goto(50, y_location +215)
+    t.write("Admit One", font=("Arial", 15), align="right")
+    t.goto(440, y_location +215)
+    t.write(dayofweek, font=("Arial", 15), align="right")
+    t.goto(225, y_location +135)
+    t.write(name, font=("Arial", 15), align="right")
+    t.goto(225, y_location +15)
+    t.write(price, font=("Arial", 15), align="right")
+
+#Main
+#1 Introduction (Welcome to the Six Flags Ticket Generator)
+print("Welcome to the Six Flags Ticket Generator") 
+
+# 2. Collect all of the pertinent information
+# Name
+# Age
+# Day of week
+# Coupon Code
+def ticketgenerator():
+    name = input("What is your name: ")
+    age = int(input("How old are you: "))
+    day = input("What day you wish to visit: ")
+    y = day.capitalize()
+    CouponCode = input("Please enter coupon code(if available): ")
+    x = CouponCode.upper()
+
+# 3. Algorithm for seting the price goes here
+#if statements
+    if age <= 3:
+        price = 0
+
+    elif age >= 4 and age <= 17 and y != "Sunday" or y != "Saturday":
+        price = 50
+
+    else:
+        price = 100
+            
+    if x == "FREEFRIDAY" and y == "Friday" and age <= 17:
+            price = 0
+
+    if x == "SUNDAY10" and y == "Sunday" and age <= 17:
+            price = 90
+
+        
+#4. Generate ticket
+    draw_ticket(name, price, day, 0)
+
+#5. FINAL
+ticketgenerator()
