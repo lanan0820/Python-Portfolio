@@ -1,0 +1,25 @@
+#Jianan Ye 
+#MadLibs
+
+def bold_text(text):
+    bold_start = '\033[1m'
+    bold_end = '\033[0m'
+    return bold_start + text + bold_end
+
+print("WELCOME TO MADLIBS")
+adjective1 = input("choose a adjective: ")
+adjective2 = input("Please choose another adjective: ")
+bird_type = input("Choose a type of bird: ")
+room = input("Choose a room in a house: ")
+verbp = input("Choose a past tense verb: ")
+verbn = input("Choose a verb: ")
+person = input("Choose a person: ")
+noun = input("Choose a noun: ")
+liquid = input("Choose a noun that is a liquid: ")
+verbing = input("Choose a verb end in -ing: ")
+
+def madlib_story(): 
+    print("It was a " + bold_text(adjective1) + " , cold November day. I woke up to the " + bold_text(adjective2) + " smell of " + bold_text(bird_type) + " roasting in the " + bold_text(room) + " donwstair. I " + bold_text(verbp) + " down the stairs to see if I could help " + bold_text(verbn) + " the dinner. My mom said,"" see if " + bold_text(person) + " needs a fresh " + bold_text(noun) + "" ". So I carried a tray of glasses full of " + bold_text(liquid) + " into the " + bold_text(verbing) + "room.") 
+
+
+madlib_story()
