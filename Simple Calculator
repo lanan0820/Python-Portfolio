@@ -1,0 +1,59 @@
+#Jianan Ye
+#Simple Calculator 
+
+#Init 
+#Functions
+#Add num1 w/ num2 and print the result
+def add(num1,num2) :
+    result = num1 + num2 #one solution 
+    print("The result is: " + str(result))
+
+def subtract(num1,num2) :
+    result = num1 - num2 #one solution 
+    print("The result is: " + str(result))
+
+def mutiply(num1,num2) :
+    result = num1 * num2 #one solution 
+    print("The result is: " + str(result))
+
+def divide(num1,num2) :
+    result = num1 / num2 #one solution 
+    print("The result is: " + str(result))
+
+def SimpleCalculator():
+    print("Welcome to Simple calculator")
+
+    while True: 
+        print("Select an operation: ")
+        print("""1. Addition 
+        2. Sutraction 
+        3. Multiplication 
+        4. Division 
+        5. Quit""")
+
+        option = int(input("(1-5) Select Option: "))
+        if option == 1:
+            int1 = int(input("Enter first number: "))
+            int2 = int(input("Enter second number: "))
+            add(int1,int2)
+
+        if option == 2:
+            int1 = int(input("Enter first number: "))
+            int2 = int(input("Enter second number: "))
+            subtract(int1,int2)
+
+        if option == 3:
+            int1 = int(input("Enter first number: "))
+            int2 = int(input("Enter second number: "))
+            mutiply(int1,int2)
+
+        if option == 4:
+            int1 = int(input("Enter first number: "))
+            int2 = int(input("Enter second number: "))
+            divide(int1,int2)
+
+        if option == 5:
+            break
+
+#Main 
+SimpleCalculator()
