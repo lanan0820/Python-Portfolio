@@ -1,0 +1,38 @@
+#Jianan
+import time
+import random
+def multiplication_quiz():
+    print("welcome to Multiplicaiton quiz!")
+    type = input("Do you want to do an endless challenge:")
+    if type == "no":
+        question_amount = input("how many question do you want to do:")
+        start_time = time.time()
+        for i in range (int(question_amount)):
+            i = i + 1
+            print("question " + str(i) + " of " + question_amount + ":" )
+            a = random.randint(1,5)
+            b = random.randint(6,10)
+            answer = input("What is " + str(a) + "x" + str(b) + ":")
+            if answer == str(a*b):
+                print("Correct!")
+            else: 
+                print("Incorrect")
+        end_time = time.time()
+        elapsed_time = end_time - start_time 
+        print("You completed the quiz in " + str(elapsed_time) + " seconds.")
+    if type == "yes":
+        while True: 
+            a = random.randint(1,5)
+            b = random.randint(6,10)
+            answer = input("What is " + str(a) + "x" + str(b) + ":")
+            if answer == str(a*b):
+                print("Correct!")
+                again = input("do you want to continue:")
+                if again == "no": 
+                    break
+            else: 
+                print("Incorrect")    
+                again = input("do you want to continue:")
+                if again == "no": 
+                    break
+multiplication_quiz()
