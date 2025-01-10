@@ -1,0 +1,18 @@
+def login(): 
+    #Hardecoded valid username and password (modify these)
+    valid_username = "lanan"
+    valid_password = "idontknowmypassword"
+
+    #Get user input for username and password
+    username = input("please enter your username (capital insensitive!): ")
+    password = input("Please enter your password (capital insensitive!): ")
+    #Convert the entered username to lowercase or uppercase by using a method for case-insensitive comparison
+    x = username.casefold()
+    y = password.casefold()
+    #Check if the entered username and password match the valid credentials 
+    if x == valid_username and y == valid_password:
+        print("You had successfully login to your account!")
+    else:
+        print("Something is wrong, please try again!")
+#Call the function to check credentials
+login()
