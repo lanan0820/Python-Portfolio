@@ -34,11 +34,14 @@ This portfolio demonstrates my hardworking in my AP CSP class
 ### SEMESTER 2
 ### Project 1: Fast food recommender
 **Summary**: This program has several functions, it could allows users to put a fast food name and search up related nutritional value of that specific food, users could also enter specific value (expectation) to a specific nutrients to get food that meets their demand, or users could look for vender for the food they desired to get.  
+
 **Key features**: 
 - Displays food name, vender, nutritional values.
 - Handles invalid inputs gracefully.
+  
 ### Project 2: Dog Breed 
 **Summary**: This program has two different functions, one is to show the images of the dog that the users are interested to breed, and other one is recommend some type of dogs that might meet users'  breed for purpose. 
+
 **Key feature**: 
 - Handles invalid values gracefully 
 - Fetch live user's input
